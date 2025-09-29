@@ -9,4 +9,5 @@ import java.util.UUID;
 @Repository
 public interface PatientRepository extends JpaRepository<Patient, UUID> {
     boolean existsByEmail(String email); // expose to service layer
+    boolean existsByEmailAndIdNot(String email, UUID id);
 }
